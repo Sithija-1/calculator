@@ -1,5 +1,10 @@
-ac.addEventListener('click', function(){
+c.addEventListener('click', function(){
     demo.value = "";
+})
+
+ac.addEventListener('click',function(){
+    demo.value="";
+     demo2.innerText = "";
 })
 
 
