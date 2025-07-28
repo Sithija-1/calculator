@@ -4,7 +4,9 @@ c.addEventListener('click', function(){
 
 ac.addEventListener('click',function(){
     demo.value="";
-     demo2.innerText = "";
+    demo2.innerText = "";
+    demo3.innerHTML="";
+
 })
 
 
@@ -81,8 +83,12 @@ document.getElementById('plus').addEventListener('click',function(){
     let values = this.getAttribute('data-value');
     document.getElementById('demo').value+=values;
 })
+document.getElementById('pr').addEventListener('click',function(){
+    view();
+})
 document.getElementById('equal').addEventListener('click',function(){
     let demo1 = document.getElementById('demo').value;
+    add();
 
     let charactor = demo1.split('');
 
@@ -123,3 +129,12 @@ document.getElementById('equal').addEventListener('click',function(){
         document.getElementById('demo2').innerHTML=answer;  
 })
 
+function add(){
+    let new1 = document.getElementById('demo').value;
+
+    localStorage.setItem("expenses", JSON.stringify(new1));
+}
+function view(){
+     let oldData = JSON.parse(localStorage.getItem("expenses"))  ;
+     document.getElementById('demo3').innerHTML=oldData|| "No data found";
+ }
