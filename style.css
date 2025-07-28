@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    border: 10px solid purple;
+    width: 425px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+img{
+    width: 100px;
+}
+#display{
+    height: 100px;
+    width: 425px;
+    border: 1px solid black;
+    
+}
+input{
+    height: 40px;
+    width: 420px;
+    border: none;
+    font-size: 2rem;
+}
+
+button:hover{
+    background-color: rgb(5, 1, 5);
+}
